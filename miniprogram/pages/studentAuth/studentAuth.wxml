@@ -1,0 +1,19 @@
+<view class="container">
+  <image class="back-btn" src="/images/return.png" bindtap="onBackTap"></image>
+  
+  <view wx:if="{{isVerified}}">
+    <text>姓名: {{studentInfo.name}}</text>
+    <text>大学: {{studentInfo.college}}</text>
+    <text>专业: {{studentInfo.major}}</text>
+    <text>学号: {{studentInfo.studentId}}</text>
+    <text class="status verified">已认证学生</text>
+  </view>
+  <view wx:else>
+    <input placeholder="请输入姓名" value="{{studentInfo.name}}" />
+    <input placeholder="请输入大学" value="{{studentInfo.college}}" />
+    <input placeholder="请输入专业" value="{{studentInfo.major}}" />
+    <input placeholder="请输入学号" value="{{studentInfo.studentId}}" />
+    <text class="status unverified">未认证学生</text>
+    <button bindtap="onSubmitAuth">提交认证</button>
+  </view>
+</view> 

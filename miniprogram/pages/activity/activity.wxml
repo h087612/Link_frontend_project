@@ -1,0 +1,13 @@
+<view class="activity_manage">
+  <view class="tab tab1">
+    <text class="{{ tabIndex === index ? 'active' : '' }}" wx:for="{{tab}}" wx:key="index" data-index="{{index}}" bind:tap="handleTab">{{item}}</text>
+  </view>
+  <!-- 活动发起管理 -->
+  <block wx:if="{{ tabIndex === 0 }}">
+    <activity-event-manage activityList="{{activityList}}" bind:fetchActivities="handleFetchActivities" />
+  </block>
+  <!-- 活动参与管理 -->
+  <block wx:if="{{ tabIndex === 1 }}">
+    <activity-participate-manage activityList="{{activityList}}" bind:fetchActivities="handleFetchActivities" />
+  </block>
+</view>

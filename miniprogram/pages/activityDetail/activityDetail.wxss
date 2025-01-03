@@ -1,0 +1,175 @@
+.activity_detail {
+  padding: 160rpx 0;
+}
+
+
+.user_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx 40rpx;
+}
+.user_list image {
+  width: 110rpx;
+  height: 110rpx;
+}
+.detail_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}
+.detail_info .title {
+  flex: 1;
+  font-size: 30rpx;
+}
+.detail_info .status {
+  width: 80rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background-color: rgba(162,239,77,1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 24rpx;
+  text-align: center;
+  margin: 0 20rpx;
+}
+.detail_info .staticical {
+  display: flex;
+  align-items: center;
+  color: rgba(52,124,175,1);
+  font-size: 28rpx;
+}
+.detail_info .staticical image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.detail_info .staticical image.favor {
+  display: block;
+  margin: 0 20rpx;
+}
+.user_info {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+  margin: 20rpx 0;
+}
+.user_info image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.user_info .content {
+  color: rgba(16,16,16,1);
+  font-size: 32rpx;
+}
+.user_info .content text.nick {
+  font-size: 36rpx;
+}
+.study_box {
+
+}
+.study_box text {
+  margin: 0 30rpx 20rpx;
+  color: rgba(16,16,16,1);
+  font-size: 34rpx;
+}
+.study_box .study_img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 80rpx;
+}
+.study_box .study_img image {
+  width: 300rpx;
+  height: 200rpx;
+  border-radius: 4rpx;
+}
+.btn_join {
+  width: 690rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 60rpx;
+  background-color: rgba(56,181,74,1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 32rpx;
+  text-align: center;
+  margin: 40rpx auto 20rpx;
+}
+.btn_join.disabled {
+  background-color: gray;
+  pointer-events: none; /* 禁止点击 */
+}
+.comment_list {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.comment_list .comment_item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.comment_list .comment_item image {
+  flex-shrink: 0;
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+}
+.comment_item .content {
+  flex: 1;
+  color: rgba(16,16,16,1);
+  font-size: 26rpx;
+  margin: 0 20rpx;
+}
+.comment_item .content .title {
+  font-size: 30rpx;
+}
+.comment_item .floor {
+  color: rgba(16,16,16,1);
+  font-size: 30rpx;
+}
+
+.publish {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #ffffff;
+  position: fixed;
+  z-index: 10;
+  bottom: 40rpx;
+}
+.publish input {
+  flex: 1;
+  height: 76rpx;
+  background-color: rgba(243,243,243,1);
+  color: rgba(200,201,201,1);
+  font-size: 24rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.publish image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 10rpx;
+}
+
+.back-button {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  padding-top: 50rpx;
+  /* 其他样式 */
+}

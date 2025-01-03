@@ -1,0 +1,19 @@
+<view class="container">
+  <image class="back-btn" src="/images/return.png" bindtap="onBackTap"></image>
+  
+  <view class="notification-detail" wx:if="{{notification.type === 'Info'}}" style="background-color: #07c160;">
+    <text class="notification-type">个人信息通知</text>
+    <text class="notification-time">{{notification.time}}</text>
+    <view class="notification-content">{{notification.content}}</view>
+  </view>
+  <view class="notification-detail" wx:elif="{{notification.type === 'Manage'}}" style="background-color: #ff4d4f;">
+    <text class="notification-type">活动管理通知</text>
+    <text class="notification-time">{{notification.time}}</text>
+    <view class="notification-content">{{notification.content}}</view>
+  </view>
+  <view class="notification-detail" wx:elif="{{notification.type === 'Participate'}}" style="background-color: #1890ff;">
+    <text class="notification-type">活动参与通知</text>
+    <text class="notification-time">{{notification.time}}</text>
+    <view class="notification-content">{{notification.content}}</view>
+  </view>
+</view> 

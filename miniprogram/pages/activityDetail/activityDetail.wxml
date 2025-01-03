@@ -1,0 +1,50 @@
+<!--pages/ActivityDetail/ActivityDetail.wxml-->
+<view class="activity_detail">
+  <view class="user_info">
+    <image src="{{activityDetail.organizerAvatar}}" mode="aspectFill"/>
+    <view class="content">
+      <text class="nick">{{activityDetail.organizerName}}</text>
+      <text>发布时间：{{activityDetail.postTime}}</text>
+      <text>开始时间：{{activityDetail.startTime}}</text>
+    </view>
+  </view>
+  <view class="detail_info">
+    <view class="title">{{activityDetail.activityName}}</view>
+    <view class="status">{{activityDetail.status}}</view>
+    <view class="staticical">
+      <image 
+        src="{{activityDetail.ifLiked ? '../../images/icon_likeSelected.png' : '../../images/icon_like.png'}}" 
+        mode="aspectFill" 
+        bindtap="toggleLike"/>
+      <text>{{activityDetail.likeCount}}</text>
+      <image 
+        class="favor" 
+        src="{{activityDetail.ifFavored ? '../../images/icon_favorSelected.png' : '../../images/icon_favor.png'}}" 
+        mode="aspectFill" 
+        bindtap="toggleFavor"/>
+      <image src="../../images/icon_warn.png" mode="aspectFill"/>
+    </view>
+  </view>
+  <view class="study_box">
+    <text>{{activityDetail.description}}</text>
+    <view class="study_img">
+      <image wx:for="{{activityDetail.pictures}}" src="{{item}}" mode="aspectFill"/>
+    </view>
+  </view>
+  <view class="btn_join" bindtap="handleJoin" wx:if="{{activityDetail.participantStatus === 'unJoin'}}">我要加入</view>
+  <view class="btn_join disabled" wx:elif="{{activityDetail.participantStatus === 'JOIN_REQ'}}">正在申请中</view>
+  <view class="btn_join disabled" wx:elif="{{activityDetail.participantStatus === 'JOINED'}}">已加入活动</view>
+  <view class="btn_join disabled" wx:elif="{{activityDetail.participantStatus === 'EXIT_REQ'}}">申请退出中</view>
+  <scroll-view class="comment_list" scroll-y="true" style="height: 1000rpx; width:750rpx;">
+    <view class="comment_item" wx:for="{{comments}}" wx:key="commentId">
+      <image src="{{item.avatar}}" mode="aspectFill"/>
+      <view class="content">
+        <text>{{item.userName}}</text>
+        <text class="title">{{item.content}}</text>
+        <text>{{item.formattedTime}}</text>
+      </view>
+      <view class="floor">{{item.floor}}楼</view>
+    </view>
+  </scroll-view>
+  <image class="back-button" src="/images/return.png" mode="aspectFill" bindtap="goBack"/>
+</view>

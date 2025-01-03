@@ -1,0 +1,31 @@
+.favorite-page {
+  padding: 20rpx;
+}
+
+.return-button {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+  padding-top: 50rpx;
+}
+
+.activity-list {
+  margin-top: 20rpx;
+}
+
+.activity-item {
+  padding: 10rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.activity-name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.activity-category,
+.activity-time,
+.activity-status {
+  font-size: 28rpx;
+  color: #666;
+} 

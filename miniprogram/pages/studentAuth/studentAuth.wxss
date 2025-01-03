@@ -1,0 +1,39 @@
+.container {
+  padding: 20rpx;
+  padding-top: 200rpx;
+  
+}
+
+.status {
+  margin-top: 20rpx;
+  padding: 10rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.verified {
+  background-color: #07c160;
+}
+
+.unverified {
+  background-color: red;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+ padding-top: 50rpx;
+} 

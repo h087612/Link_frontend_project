@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/activity/activity",
+    "pages/message/message",
+    "pages/publish/publish",
+    "pages/userProfile/userProfile",
+    "pages/studentAuth/studentAuth",
+    "pages/notificationDetail/notificationDetail",
+    "pages/points/points",
+    "pages/activityDetail/activityDetail",
+    "pages/memberManage/memberManage",
+    "pages/favor/favor"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "renderer": "skyline",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "defaultContentBox": true,
+      "tagNameStyleIsolation": "legacy",
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "/images/activity.png",
+        "selectedIconPath": "/images/activitySelected.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "/images/publish.png",
+        "selectedIconPath": "/images/publishSelected.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/message.png",
+        "selectedIconPath": "/images/messageSelected.png"
+      },
+      {
+        "pagePath": "pages/userProfile/userProfile",
+        "text": "我的",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/userSelected.png"
+      }
+    ],
+    "color": "#7A7E83",
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black"
+  }
+}

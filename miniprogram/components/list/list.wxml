@@ -1,0 +1,21 @@
+<!--components/list/list.wxml-->
+<scroll-view class="list" scroll-y="true" style="height: 1000rpx; width:730rpx;">
+  <view class="list_item" wx:for="{{listData}}" wx:key="activityId" bindtap="goToDetail" data-id="{{item.activityId}}">
+    <view class="row1">
+      <text class="tag" wx:style="background-color: {{getCategoryColor(item.category)}};">{{item.category}}</text>
+      <text class="status" wx:style="background-color: {{getStatusColor(item.status)}};">{{item.status}}</text>
+      <text class="title">{{item.activityName}}</text>
+    </view>
+    <view class="row2">
+      <text>开始时间：{{item.startTime}}</text>
+      <view>
+        <image src="../../images/icon_like.png" mode="aspectFill"/>
+        {{item.likeCount}}
+      </view>````````   
+      <view>
+        <image src="../../images/icon_user.png" mode="aspectFill"/>
+        {{item.currentNum}}/{{item.maxNum}}
+      </view>
+    </view>
+  </view>
+</scroll-view>

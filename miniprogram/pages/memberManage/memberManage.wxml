@@ -1,0 +1,47 @@
+<view class="member_mange">
+  <image src="../../images/return.png" class="return-button" bindtap="goBack" />
+  <view class="tab">
+    <text class="{{ tabIndex === index ? 'active' : '' }}" wx:for="{{tab}}" wx:key="index" data-index="{{index}}" bind:tap="handleTab">{{item}}</text>
+  </view>
+
+  <!-- 人员列表 -->
+  <block wx:if="{{tabIndex === 0}}">
+    <view class="tab1_user">
+      <view class="tab1_user_list" wx:for="{{memberList}}" wx:key="participatorId">
+        <image src="{{item.avatar}}" mode="aspectFill"/>
+        <view class="info">
+          <text>{{item.nickname}}</text>
+          <text>联系方式: {{item.contact}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 申请加入 -->
+  <block wx:if="{{tabIndex === 1}}">
+    <view class="tab2_user">
+      <view class="tab2_user_list" wx:for="{{memberList}}" wx:key="applicantId">
+        <image src="{{item.avatar}}" mode="aspectFill"/>
+        <view class="nick">
+          <text>{{item.nickname}}</text>
+        </view>
+        <view class="agree" bindtap="approveJoinRequest" data-applicant-id="{{item.applicantId}}">同意</view>
+        <view class="reject" bindtap="rejectJoinRequest" data-applicant-id="{{item.applicantId}}">拒绝</view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 申请退出 -->
+  <block wx:if="{{tabIndex === 2}}">
+    <view class="tab2_user">
+      <view class="tab2_user_list" wx:for="{{memberList}}" wx:key="applicantId">
+        <image src="{{item.avatar}}" mode="aspectFill"/>
+        <view class="nick">
+          <text>{{item.nickname}}</text>
+        </view>
+        <view class="agree" bindtap="approveExitRequest" data-applicant-id="{{item.applicantId}}">同意</view>
+        <view class="reject" bindtap="rejectExitRequest" data-applicant-id="{{item.applicantId}}">拒绝</view>
+      </view>
+    </view>
+  </block>
+</view>

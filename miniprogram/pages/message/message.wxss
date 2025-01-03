@@ -1,0 +1,34 @@
+.container {
+  padding: 20rpx;
+  padding-top: 180rpx;
+}
+
+.notification-list {
+  width: 100%;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0,0,0,0.1);
+}
+
+.notification-type {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.notification-time {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 40rpx 0;
+}

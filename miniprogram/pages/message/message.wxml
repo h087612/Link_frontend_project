@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="notification-list">
+    <block wx:for="{{notifications}}" wx:key="notificationId">
+      <view class="notification-item" wx:if="{{item.type === 'Info'}}" style="background-color: #07c160;" bindtap="navigateToDetail" data-id="{{item.notificationId}}">
+        <text class="notification-type">个人信息通知</text>
+        <text class="notification-time">{{item.time}}</text>
+      </view>
+      <view class="notification-item" wx:elif="{{item.type === 'Manage'}}" style="background-color: #ff4d4f;" bindtap="navigateToDetail" data-id="{{item.notificationId}}">
+        <text class="notification-type">活动管理通知</text>
+        <text class="notification-time">{{item.time}}</text>
+      </view>
+      <view class="notification-item" wx:elif="{{item.type === 'Participate'}}" style="background-color: #1890ff;" bindtap="navigateToDetail" data-id="{{item.notificationId}}">
+        <text class="notification-type">活动参与通知</text>
+        <text class="notification-time">{{item.time}}</text>
+      </view>
+    </block>
+    <view wx:if="{{notifications.length === 0}}" class="empty-state">
+      暂无通知
+    </view>
+  </view>
+</view>

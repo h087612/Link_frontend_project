@@ -1,0 +1,59 @@
+<view class="container">
+  <input class="input" placeholder="请输入活动名称" bindinput="onNameInput" />
+
+  <view class="category-section">
+    <text class="label">活动类型</text>
+    <picker mode="selector" range="{{categoryOptions}}" bindchange="onCategoryChange">
+      <view class="picker">
+        {{categoryDisplay || '请选择类型'}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="date-section">
+    <text class="label">开始日期</text>
+    <picker mode="date" value="{{activityDate}}" bindchange="onDateChange">
+      <view class="picker">
+        {{activityDate || '请选择开始日期'}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="time-section">
+    <text class="label">开始时间</text>
+    <picker mode="time" value="{{activityTime}}" bindchange="onTimeChange">
+      <view class="picker">
+        {{activityTime || '请选择时间'}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="limit-section">
+    <text class="label">人数限制</text>
+    <view class="limit-controls">
+      <text class="limit-btn" bindtap="onDecrease">-</text>
+      <text class="limit-num">{{participantLimit}}</text>
+      <text class="limit-btn" bindtap="onIncrease">+</text>
+    </view>
+  </view>
+
+  <view class="upload-section">
+    <text class="label">上传图片</text>
+    <image class="upload-icon" src="/images/upload.png" bindtap="onUploadImage" />
+  </view>
+
+  <scroll-view class="thumbnail-scroll" scroll-x="true">
+    <view class="thumbnail-section">
+      <block wx:for="{{imageUrls}}" wx:key="*this">
+        <image src="{{item}}" mode="aspectFill" class="thumbnail" />
+      </block>
+    </view>
+  </scroll-view>
+
+  <textarea class="textarea" placeholder="请输入详细信息描述" bindinput="onDetailsInput"></textarea>
+
+  <view class="button-section">
+    <button class="publish-btn" bindtap="onPublish">发布</button>
+    <button class="cancel-btn" bindtap="onCancel">取消</button>
+  </view>
+</view>

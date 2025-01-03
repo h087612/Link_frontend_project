@@ -1,0 +1,65 @@
+/* components/list/list.wxss */
+.list {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 0 40rpx;
+}
+.list_item {
+  margin-bottom: 60rpx;
+}
+.list_item .row1 {
+  display: flex;
+  align-items: center;
+}
+.list_item .row1 .tag {
+  width: 80rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background-color: rgba(255,158,36,1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 24rpx;
+  text-align: center;
+}
+.list_item .row1 .status {
+  width: 80rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 10rpx;
+  background-color: rgba(162,239,77,1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 24rpx;
+  text-align: center;
+  margin: 0 20rpx;
+}
+.list_item .row1 .title {
+  color: rgb(16,16,16);
+  font-size: 28rpx;
+  max-width: 470rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list_item .row2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rpx;
+}
+.list_item .row2 text {
+  color: rgba(52,124,175,1);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.list_item .row2 image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.list_item .row2 view {
+  color: rgba(52,124,175,1);
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}

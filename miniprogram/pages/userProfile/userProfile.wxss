@@ -1,0 +1,98 @@
+.container {
+  padding: 20rpx;
+  padding-top: 180rpx;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 75%;
+}
+
+.info {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.nickname, .contact {
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+}
+
+.status-item {
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+
+.passed {
+  background-color: #07c160;
+  padding-left: 20rpx;
+}
+
+.not-banned {
+  background-color: #07c160;
+  padding-left: 50rpx;
+}
+
+.services {
+  margin-top: 100rpx;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.service-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  margin-bottom: 20rpx;
+}
+
+.service-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+  z-index: 10;
+}
+
+.service-btn:active {
+  transform: scale(0.95);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 5rpx;
+}
+
+.service-item text {
+  font-size: 24rpx;
+  padding-bottom: 5rpx;
+}

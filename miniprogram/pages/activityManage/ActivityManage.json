@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "activity-event-manage": "../../components/activityEventManage/activityEventManage",
+    "activity-participate-manage": "../../components/activityParticipateManage/activityParticipateManage"
+  }
+}

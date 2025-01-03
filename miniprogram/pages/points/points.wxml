@@ -1,0 +1,19 @@
+<view class="container">
+  <image class="back-btn" src="/images/return.png" bindtap="onBackTap"></image>
+  
+  <view class="user-point">
+    <text>当前积分: {{userPoint}}</text>
+  </view>
+  
+  <view class="transaction-list">
+    <block wx:for="{{transactions}}" wx:key="transactionId">
+      <view class="transaction-item" style="background-color: {{item.points > 0 ? '#ff4d4f' : '#07c160'}};">
+        <text class="transaction-points">{{item.points > 0 ? '+' : ''}}{{item.points}}</text>
+        <text class="transaction-time">{{item.time}}</text>
+      </view>
+    </block>
+    <view wx:if="{{transactions.length === 0}}" class="empty-state">
+      暂无积分变动记录
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,4 @@
+<view class="favorite-page">
+  <image src="/images/return.png" class="return-button" bindtap="goBack" />
+  <common-list listData="{{favoriteList}}" bind:goToDetail="goToDetail"></common-list>
+</view>

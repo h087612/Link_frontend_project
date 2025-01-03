@@ -1,0 +1,30 @@
+<view>
+  <view class="tab tab2">
+    <text class="{{ tabIndex === index ? 'active' : '' }}" wx:for="{{ tab }}" wx:key="index" data-index="{{index}}" bind:tap="handleTab">{{item}}</text>
+  </view>
+  <view class="activity_list">
+    <block wx:for="{{formattedActivityList}}" wx:key="activityId">
+      <view class="activity_item">
+        <view class="row1">
+          <text class="tag">{{item.formattedCategory}}</text>
+          <text class="title">{{item.activityName}}</text>
+        </view>
+        <view class="row2">
+          <text>开始时间：{{item.formattedStartTime}}</text>
+          <view>
+            <image src="../../images/icon_like.png" mode="aspectFill"/>
+            {{item.likeCount}}
+          </view>
+          <view>
+            <image src="../../images/icon_user.png" mode="aspectFill"/>
+            {{item.currentNum}}/{{item.maxNum}}
+          </view>
+        </view>
+        <view class="operate">
+          <text bindtap="navigateToMemberManage" data-activity-id="{{item.activityId}}">人员管理</text>
+          <text class="delete-button" bindtap="deleteActivity" data-activity-id="{{item.activityId}}">删除</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
