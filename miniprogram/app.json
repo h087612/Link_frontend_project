@@ -12,6 +12,7 @@
     "pages/points/points",
     "pages/activityDetail/activityDetail",
     "pages/memberManage/memberManage",
+    "pages/memberList/memberList",
     "pages/favor/favor"
   ],
   "window": {

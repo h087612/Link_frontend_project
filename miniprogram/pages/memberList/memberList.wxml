@@ -1,0 +1,15 @@
+<view class="member_mange">
+  <image src="http://114.55.119.2:9000/person/return.png" class="return-button" bindtap="goBack" />
+  <!-- 人员列表 -->
+  <block>
+    <view class="tab1_user">
+      <view class="tab1_user_list" wx:for="{{memberList}}" wx:key="participatorId">
+        <image src="{{item.avatar}}" mode="aspectFill"/>
+        <view class="info">
+          <text>{{item.nickname}}</text>
+          <text>联系方式: {{item.contact}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

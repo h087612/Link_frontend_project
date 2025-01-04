@@ -68,17 +68,17 @@ Page<PageData, {
     interval: 3000,
     duration: 500,
     nav: [
-      { id: 1, name: "学习", image: "../../images/nav_study.png" },
-      { id: 2, name: "运动", image: "../../images/nav_sport.png" },
-      { id: 3, name: "拼车", image: "../../images/nav_carpool.png" },
-      { id: 4, name: "恋爱", image: "../../images/nav_love.png" },
-      { id: 5, name: "其他", image: "../../images/nav_other.png" }
+      { id: 1, name: "学习", image: "http://114.55.119.2:9000/person/nav_study.png" },
+      { id: 2, name: "运动", image: "http://114.55.119.2:9000/person/nav_sport.png" },
+      { id: 3, name: "拼车", image: "http://114.55.119.2:9000/person/nav_carpool.png" },
+      { id: 4, name: "恋爱", image: "http://114.55.119.2:9000/person/nav_love.png" },
+      { id: 5, name: "其他", image: "http://114.55.119.2:9000/person/nav_other.png" }
     ],
     listData: [], // 用于存储后端返回的数据
     swiperImages: [
-      '../../images/swiper1.png',
-      '../../images/swiper2.png',
-      '../../images/swiper3.png'
+      'http://114.55.119.2:9000/person/swiper1.png',
+      'http://114.55.119.2:9000/person/swiper2.png',
+      'http://114.55.119.2:9000/person/swiper3.png'
     ]
   },
 

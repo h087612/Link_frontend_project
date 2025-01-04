@@ -1,5 +1,5 @@
 <view class="container">
-  <image class="back-btn" src="/images/return.png" bindtap="onBackTap"></image>
+  <image class="back-btn" src="http://114.55.119.2:9000/person/return.png" bindtap="onBackTap"></image>
   
   <view wx:if="{{isVerified}}">
     <text>姓名: {{studentInfo.name}}</text>

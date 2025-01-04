@@ -88,7 +88,7 @@ Page({
     const token = wx.getStorageSync('token');
     console.log('Approving join request for:', applicantId, 'Activity ID:', this.data.activityId);
     wx.request({
-      url: `http://localhost:10010/activity/management/applicationOfJoin/${this.data.activityId}`,
+      url: `http://localhost:10010/activity/management/applicationOfJoin/${this.data.activityId}/${applicantId}`,
       method: 'PUT',
       header: {
         'Authorization': `${token}`,
@@ -115,7 +115,7 @@ Page({
     const applicantId = e.currentTarget.dataset.applicantId;
     const token = wx.getStorageSync('token');
     wx.request({
-      url: `http://localhost:10010/activity/management/applicationOfJoin/${this.data.activityId}`,
+      url: `http://localhost:10010/activity/management/applicationOfJoin/${this.data.activityId}/${applicantId}`,
       method: 'DELETE',
       header: {
         'Authorization': `${token}`,

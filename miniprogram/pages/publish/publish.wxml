@@ -39,7 +39,7 @@
 
   <view class="upload-section">
     <text class="label">上传图片</text>
-    <image class="upload-icon" src="/images/upload.png" bindtap="onUploadImage" />
+    <image class="upload-icon" src="http://114.55.119.2:9000/person/upload.png" bindtap="onUploadImage" />
   </view>
 
   <scroll-view class="thumbnail-scroll" scroll-x="true">

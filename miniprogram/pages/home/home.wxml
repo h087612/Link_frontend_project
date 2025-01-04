@@ -2,7 +2,7 @@
 <view class="container">
   <view class="search">
     <view class="search_content">
-      <image src="/images/icon_search.png" mode="aspectFill"/>
+      <image src="http://114.55.119.2:9000/person/icon_search.png" mode="aspectFill"/>
       搜索
     </view>
   </view>
@@ -29,23 +29,23 @@
 </view>
 <tabbar class="tabbar" bindchange="onTabChange">
   <tabbar-item index="0" activeColor="#1AAD19">
-    <image class="tabbar-icon" src="{{0 === currentTab ? '/images/homeSelected.png' : '/images/home.png'}}" />
+    <image class="tabbar-icon" src="{{0 === currentTab ? 'http://114.55.119.2:9000/person/homeSelected.png' : 'http://114.55.119.2:9000/person/home.png'}}" />
     <text class="tabbar-text">首页</text>
   </tabbar-item>
   <tabbar-item index="1">
-    <image class="tabbar-icon" src="{{1 === currentTab ? '/images/activitySelected.png' : '/images/activity.png'}}" />
+    <image class="tabbar-icon" src="{{1 === currentTab ? 'http://114.55.119.2:9000/person/activitySelected.png' : 'http://114.55.119.2:9000/person/activity.png'}}" />
     <text class="tabbar-text">活动</text>
   </tabbar-item>
   <tabbar-item index="2">
-    <image class="tabbar-icon" src="{{2 === currentTab ? '/images/publishSelected.png' : '/images/publish.png'}}" />
+    <image class="tabbar-icon" src="{{2 === currentTab ? 'http://114.55.119.2:9000/person/publishSelected.png' : 'http://114.55.119.2:9000/person/publish.png'}}" />
     <text class="tabbar-text">发布</text>
   </tabbar-item>
   <tabbar-item index="3">
-    <image class="tabbar-icon" src="{{3 === currentTab ? '/images/messageSelected.png' : '/images/message.png'}}" />
+    <image class="tabbar-icon" src="{{3 === currentTab ? 'http://114.55.119.2:9000/person/messageSelected.png' : 'http://114.55.119.2:9000/person/message.png'}}" />
     <text class="tabbar-text">消息</text>
   </tabbar-item>
   <tabbar-item index="4">
-    <image class="tabbar-icon" src="{{4 === currentTab ? '/images/userSelected.png' : '/images/user.png'}}" />
+    <image class="tabbar-icon" src="{{4 === currentTab ? 'http://114.55.119.2:9000/person/userSelected.png' : 'http://114.55.119.2:9000/person/user.png'}}" />
     <text class="tabbar-text">我的</text>
   </tabbar-item>
 </tabbar>

@@ -3,6 +3,9 @@ page {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .scrollarea {
@@ -14,7 +17,7 @@ page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #aaa;
+  color: rgb(255, 69, 0);
   width: 80%;
 }
 
@@ -28,6 +31,13 @@ page {
 
 .usermotto {
   margin-top: 200px;
+  text-align: center;
+}
+
+.user-motto {
+  font-size: 36rpx;
+  color: rgb(255, 69, 0);
+  font-weight: bold;
 }
 
 .avatar-wrapper {
@@ -49,9 +59,9 @@ page {
   width: 100%;
   padding: 16px;
   box-sizing: border-box;
-  border-top: .5px solid rgba(0, 0, 0, 0.1);
-  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
-  color: black;
+  border-top: .5px solid rgba(217, 6, 245, 0.1);
+  border-bottom: .5px solid rgba(208, 5, 235, 0.1);
+  color: rgb(255, 69, 0);
 }
 
 .nickname-label {

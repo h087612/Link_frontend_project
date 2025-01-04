@@ -1,5 +1,5 @@
 <view class="container">
-  <image class="back-btn" src="/images/return.png" bindtap="onBackTap"></image>
+  <image class="back-btn" src="http://114.55.119.2:9000/person/return.png" bindtap="onBackTap"></image>
   
   <view class="notification-detail" wx:if="{{notification.type === 'Info'}}" style="background-color: #07c160;">
     <text class="notification-type">个人信息通知</text>

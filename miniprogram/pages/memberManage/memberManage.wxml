@@ -1,5 +1,5 @@
 <view class="member_mange">
-  <image src="../../images/return.png" class="return-button" bindtap="goBack" />
+  <image src="http://114.55.119.2:9000/person/return.png" class="return-button" bindtap="goBack" />
   <view class="tab">
     <text class="{{ tabIndex === index ? 'active' : '' }}" wx:for="{{tab}}" wx:key="index" data-index="{{index}}" bind:tap="handleTab">{{item}}</text>
   </view>

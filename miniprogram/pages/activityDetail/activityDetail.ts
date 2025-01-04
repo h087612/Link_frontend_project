@@ -7,6 +7,7 @@ Page({
   data: {
     activityDetail: null, // 用于存储活动详情信息
     comments: [], // 用于存储评论数据
+    commentContent: '', // 新增用于存储评论内容
   },
 
   /**
@@ -234,5 +235,63 @@ Page({
     wx.navigateBack({
       delta: 1,
     });
-  }
+  },
+
+  onCommentInput(e: any) {
+    this.setData({
+      commentContent: e.detail.value
+    });
+  },
+
+  submitComment() {
+    const token = wx.getStorageSync('token');
+    const activityId = this.data.activityDetail.activityId;
+    const content = this.data.commentContent;
+
+    if (!content.trim()) {
+      wx.showToast({
+        title: '评论内容不能为空',
+        icon: 'none'
+      });
+      return;
+    }
+
+    wx.request({
+      url: 'http://localhost:10010/activity/comment',
+      method: 'POST',
+      header: {
+        'content-type': 'application/json',
+        'Authorization': ` ${token}`
+      },
+      data: {
+        activityId: activityId,
+        parentFloor: 0, // 假设为顶层评论
+        content: content
+      },
+      success: (res) => {
+        if (res.data && res.data.code === 0) {
+          wx.showToast({
+            title: '评论成功',
+            icon: 'success'
+          });
+          this.setData({
+            commentContent: ''
+          });
+          this.fetchComments(activityId); // 重新获取评论列表
+        } else {
+          wx.showToast({
+            title: '评论失败',
+            icon: 'none'
+          });
+        }
+      },
+      fail: (err) => {
+        console.error('评论接口调用失败:', err);
+        wx.showToast({
+          title: '评论失败',
+          icon: 'none'
+        });
+      },
+    });
+  },
 })

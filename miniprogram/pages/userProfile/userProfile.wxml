@@ -17,25 +17,25 @@
     <view class="service-icons">
       <view class="service-item">
         <button class="service-btn" bindtap="onStudentAuthTap" >
-          <image class="icon" src="/images/authentication.png"></image>
+          <image class="icon" src="http://114.55.119.2:9000/person/authentication.png"></image>
         </button>
         <text>学生认证</text>
       </view>
       <view class="service-item">
         <button class="service-btn" bindtap="onModifyInfoTap">
-          <image class="icon" src="/images/modify.png"></image>
+          <image class="icon" src="http://114.55.119.2:9000/person/modify.png"></image>
         </button>
         <text>修改个人信息</text>
       </view>
       <view class="service-item">
         <button class="service-btn" bindtap="onFavoritesTap">
-          <image class="icon" src="/images/star.png"></image>
+          <image class="icon" src="http://114.55.119.2:9000/person/star.png"></image>
         </button>
         <text>我的收藏</text>
       </view>
       <view class="service-item">
         <button class="service-btn" bindtap="onPointsTap">
-          <image class="icon" src="/images/point.png"></image>
+          <image class="icon" src="http://114.55.119.2:9000/person/point.png"></image>
         </button>
         <text>我的积分</text>
       </view>

@@ -32,7 +32,7 @@ Page<UserProfilePageData, UserProfilePageInstance>({
       '/pages/userProfile/userProfile'
     ],
     userInfo: {
-      avatar: '/images/default.png',
+      avatar: 'http://114.55.119.2:9000/person/default.png',
       nickname: '未登录',
       contact: '',
       isBan: false

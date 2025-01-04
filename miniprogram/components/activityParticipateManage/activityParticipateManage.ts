@@ -48,6 +48,43 @@ Component({
       const statusMap = ['JOINED', 'JOIN_REQ', 'EXIT_REQ'];
       this.triggerEvent('fetchActivities', { status: statusMap[index] });
     },
+
+    applyExit: function(e) {
+      const token = wx.getStorageSync('token');
+      const activityId = e.currentTarget.dataset.activityId;
+
+      wx.request({
+        url: `http://localhost:10010/activity/participation/${activityId}`,
+        method: 'PUT',
+        header: {
+          'content-type': 'application/json',
+          'Authorization': ` ${token}`
+        },
+        success: (res) => {
+          if (res.data && res.data.code === 0) {
+            wx.showToast({
+              title: '申请退出成功',
+              icon: 'success'
+            });
+            // 重新获取已参与的活动列表
+            this.triggerEvent('fetchActivities', { status: 'JOINED' });
+          } else {
+            wx.showToast({
+              title: '申请退出失败',
+              icon: 'none'
+            });
+          }
+        },
+        fail: (err) => {
+          console.error('申请退出接口调用失败:', err);
+          wx.showToast({
+            title: '申请退出失败',
+            icon: 'none'
+          });
+        },
+      });
+    },
+
     formatDate(dateString: string): string {
       const date = new Date(dateString);
       const options: Intl.DateTimeFormatOptions = {
@@ -58,6 +95,12 @@ Component({
         minute: '2-digit',
       };
       return date.toLocaleDateString('zh-CN', options);
+    },
+    navigateToMemberList: function(e) {
+      const activityId = e.currentTarget.dataset.activityId;
+      wx.navigateTo({
+        url: `/pages/memberList/memberList?activityId=${activityId}`
+      });
     },
     formatCategory(category: string): string {
       const categoryMap: { [key: string]: string } = {

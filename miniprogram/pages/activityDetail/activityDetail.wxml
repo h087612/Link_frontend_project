@@ -13,16 +13,16 @@
     <view class="status">{{activityDetail.status}}</view>
     <view class="staticical">
       <image 
-        src="{{activityDetail.ifLiked ? '../../images/icon_likeSelected.png' : '../../images/icon_like.png'}}" 
+        src="{{activityDetail.ifLiked ? 'http://114.55.119.2:9000/person/icon_likeSelected.png' : 'http://114.55.119.2:9000/person/icon_like.png'}}" 
         mode="aspectFill" 
         bindtap="toggleLike"/>
       <text>{{activityDetail.likeCount}}</text>
       <image 
         class="favor" 
-        src="{{activityDetail.ifFavored ? '../../images/icon_favorSelected.png' : '../../images/icon_favor.png'}}" 
+        src="{{activityDetail.ifFavored ? 'http://114.55.119.2:9000/person/icon_favorSelected.png' : 'http://114.55.119.2:9000/person/icon_favor.png'}}" 
         mode="aspectFill" 
         bindtap="toggleFavor"/>
-      <image src="../../images/icon_warn.png" mode="aspectFill"/>
+      <image src="http://114.55.119.2:9000/person/icon_warn.png" mode="aspectFill"/>
     </view>
   </view>
   <view class="study_box">
@@ -35,6 +35,10 @@
   <view class="btn_join disabled" wx:elif="{{activityDetail.participantStatus === 'JOIN_REQ'}}">正在申请中</view>
   <view class="btn_join disabled" wx:elif="{{activityDetail.participantStatus === 'JOINED'}}">已加入活动</view>
   <view class="btn_join disabled" wx:elif="{{activityDetail.participantStatus === 'EXIT_REQ'}}">申请退出中</view>
+  <view class="comment_input">
+    <input type="text" placeholder="请输入评论" bindinput="onCommentInput" value="{{commentContent}}" />
+    <button class="submit_comment" bindtap="submitComment">评论</button>
+  </view>
   <scroll-view class="comment_list" scroll-y="true" style="height: 1000rpx; width:750rpx;">
     <view class="comment_item" wx:for="{{comments}}" wx:key="commentId">
       <image src="{{item.avatar}}" mode="aspectFill"/>
@@ -46,5 +50,6 @@
       <view class="floor">{{item.floor}}楼</view>
     </view>
   </scroll-view>
-  <image class="back-button" src="/images/return.png" mode="aspectFill" bindtap="goBack"/>
+  
+  <image class="back-button" src="http://114.55.119.2:9000/person/return.png" mode="aspectFill" bindtap="goBack"/>
 </view>

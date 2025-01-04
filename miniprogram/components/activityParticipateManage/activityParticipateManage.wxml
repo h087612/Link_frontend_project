@@ -12,18 +12,18 @@
         <view class="row2">
           <text>开始时间：{{item.formattedStartTime}}</text>
           <view>
-            <image src="../../images/icon_like.png" mode="aspectFill"/>
+            <image src="http://114.55.119.2:9000/person/icon_like.png" mode="aspectFill"/>
             {{item.likeCount}}
           </view>
           <view>
-            <image src="../../images/icon_user.png" mode="aspectFill"/>
+            <image src="http://114.55.119.2:9000/person/icon_user.png" mode="aspectFill"/>
             {{item.currentNum}}/{{item.maxNum}}
           </view>
         </view>
       </view>
       <view class="operate">
-        <text>人员列表</text>
-        <text>申请退出</text>
+        <text bindtap="navigateToMemberList" data-activity-id="{{item.activityId}}">人员列表</text>
+        <text wx:if="{{tabIndex === 0}}" bindtap="applyExit" data-activity-id="{{item.activityId}}">申请退出</text>
       </view>
     </block>
   </view>

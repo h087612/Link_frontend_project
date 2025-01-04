@@ -9,11 +9,11 @@
     <view class="row2">
       <text>开始时间：{{item.startTime}}</text>
       <view>
-        <image src="../../images/icon_like.png" mode="aspectFill"/>
+        <image src="http://114.55.119.2:9000/person/icon_like.png" mode="aspectFill"/>
         {{item.likeCount}}
       </view>````````   
       <view>
-        <image src="../../images/icon_user.png" mode="aspectFill"/>
+        <image src="http://114.55.119.2:9000/person/icon_user.png" mode="aspectFill"/>
         {{item.currentNum}}/{{item.maxNum}}
       </view>
     </view>
